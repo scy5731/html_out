@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>소속사 관리</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="app">
+    <div id="sidebar-slot"></div>
+
+    <main class="main">
+      <div class="page-title">
+        <span class="ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="4" y="4" width="16" height="16" rx="2"/>
+            <circle cx="12" cy="10" r="3"/>
+            <path d="M7 18a5 5 0 0 1 10 0"/>
+          </svg>
+        </span>
+        <span class="crumb">소속사 관리</span>
+      </div>
+
+      <div class="page-split">
+        <div class="left-form">
+          <div class="form-row">
+            <label class="form-label">소속사 <span class="req">*</span></label>
+            <input type="text" class="form-control" placeholder="소속사를 입력해 주세요.">
+          </div>
+
+          <div class="form-row">
+            <label class="form-label">업종 <span class="req">*</span></label>
+            <input type="text" class="form-control" placeholder="업종을 입력해 주세요.">
+          </div>
+
+          <div class="form-row">
+            <label class="form-label">비고</label>
+            <textarea class="form-control" placeholder="비고 입력란"></textarea>
+          </div>
+
+          <div style="height: 360px;"></div>
+          <button class="btn-save">저장</button>
+        </div>
+
+        <div class="right-table">
+          <div class="toolbar">
+            <div class="right">
+              <button class="btn-outline-sm">선택삭제</button>
+            </div>
+          </div>
+
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th class="col-checkbox"><label class="chk"><input type="checkbox"><span class="box"></span></label></th>
+                <th>소속사</th>
+                <th>업종</th>
+                <th>비고</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><label class="chk"><input type="checkbox"><span class="box"></span></label></td>
+                <td>(주)오픈웍스</td>
+                <td>정보통신공사업</td>
+                <td>-</td>
+              </tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>window.__ACTIVE = 'gen-company';</script>
+  <script src="../assets/js/sidebar.js"></script>
+</body>
+</html>

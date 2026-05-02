@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>현장 설정 - 관리자</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .admin-grid {
+      display: grid;
+      grid-template-columns: 320px 1fr 1fr 1fr;
+      gap: 16px;
+      align-items: start;
+    }
+    .col-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #222;
+      margin-bottom: 14px;
+    }
+    .panel-form {
+      background: #fff;
+      border: 1px solid #e3e3e3;
+      border-radius: 4px;
+      padding: 18px;
+    }
+    .field {
+      margin-bottom: 18px;
+    }
+    .field:last-child { margin-bottom: 0; }
+    .field-name {
+      font-weight: 700;
+      font-size: 13px;
+      color: #222;
+      margin-bottom: 8px;
+    }
+    .radio-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .left-form { padding: 0; }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <div id="sidebar-slot"></div>
+
+    <main class="main">
+      <div class="page-title">
+        <span class="ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 21h18"/>
+            <path d="M5 21V7l7-4 7 4v14"/>
+            <path d="M9 9h2v2H9zM13 9h2v2h-2zM9 13h2v2H9zM13 13h2v2h-2zM9 17h6v4H9z"/>
+          </svg>
+        </span>
+        <span class="crumb">현장 설정</span>
+      </div>
+
+      <div class="admin-grid">
+        <!-- col 1: 좌측 입력 폼 -->
+        <div>
+          <div class="form-row">
+            <label class="form-label">현장 주소 등록</label>
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="주소를 등록해 주세요.">
+              <button class="btn-dark">
+                주소검색
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16" y2="16"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label class="form-label">공지사항 롤링 타임</label>
+            <div class="input-group">
+              <input type="text" class="form-control" value="5">
+              <span class="suffix">초</span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label class="form-label">CCTV 롤링 타임</label>
+            <div class="input-group">
+              <input type="text" class="form-control" value="30">
+              <span class="suffix">초</span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label class="form-label">이동형 CCTV 이탈범위(반경)</label>
+            <div class="input-group">
+              <input type="text" class="form-control" value="30">
+              <span class="suffix">m</span>
+            </div>
+          </div>
+
+          <div style="height: 380px;"></div>
+          <button class="btn-save">저장</button>
+        </div>
+
+        <!-- col 2: 현장 정보 + 시스템 사용 -->
+        <div>
+          <div class="col-title">현장 정보</div>
+          <div class="panel-form" style="margin-bottom:16px;">
+            <div class="field">
+              <div class="field-name">구간 타입</div>
+              <div class="radio-row">
+                <label class="radio"><input type="radio" name="section-type"><span class="box"></span>단일구간</label>
+                <label class="radio"><input type="radio" name="section-type"><span class="box"></span>다중구간</label>
+              </div>
+            </div>
+            <div class="field">
+              <div class="field-name">굴진율(라이닝) 입력 방식</div>
+              <div class="radio-row">
+                <label class="radio"><input type="radio" name="excav-mode"><span class="box"></span>일일 굴진량 입력</label>
+                <label class="radio"><input type="radio" name="excav-mode"><span class="box"></span>누적 굴진량 입력</label>
+              </div>
+            </div>
+            <div class="field">
+              <div class="field-name">SOS 알람(BLE)</div>
+              <div class="radio-row">
+                <label class="radio"><input type="radio" name="sos-ble"><span class="box"></span>사용</label>
+                <label class="radio"><input type="radio" name="sos-ble"><span class="box"></span>미사용</label>
+              </div>
+            </div>
+            <div class="field">
+              <div class="field-name">유해가스 알람 범위</div>
+              <div class="radio-row">
+                <label class="radio"><input type="radio" name="gas-range"><span class="box"></span>안전-위험</label>
+                <label class="radio"><input type="radio" name="gas-range"><span class="box"></span>안전-경고-위험</label>
+              </div>
+            </div>
+            <div class="field">
+              <div class="field-name">유해가스 종류</div>
+              <div class="radio-row">
+                <label class="radio"><input type="radio" name="gas-kind"><span class="box"></span>5종 센서</label>
+                <label class="radio"><input type="radio" name="gas-kind"><span class="box"></span>6종 센서</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-title">시스템 사용</div>
+          <div class="panel-form">
+            <div class="field">
+              <div class="field-name">NMS</div>
+              <div class="radio-row">
+                <label class="radio"><input type="radio" name="nms"><span class="box"></span>사용</label>
+                <label class="radio"><input type="radio" name="nms"><span class="box"></span>미사용</label>
+              </div>
+            </div>
+            <div class="field">
+              <div class="field-name">CCTV 모니터링 화면</div>
+              <div class="radio-row">
+                <label class="radio"><input type="radio" name="cctv-mon"><span class="box"></span>사용</label>
+                <label class="radio"><input type="radio" name="cctv-mon"><span class="box"></span>미사용</label>
+              </div>
+            </div>
+            <div class="field">
+              <div class="field-name">DID</div>
+              <div class="radio-row">
+                <label class="radio"><input type="radio" name="did"><span class="box"></span>사용</label>
+                <label class="radio"><input type="radio" name="did"><span class="box"></span>미사용</label>
+              </div>
+            </div>
+            <div class="field">
+              <div class="field-name">GPS</div>
+              <div class="radio-row">
+                <label class="radio"><input type="radio" name="gps"><span class="box"></span>사용</label>
+                <label class="radio"><input type="radio" name="gps"><span class="box"></span>미사용</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- col 3: 디바이스 1 -->
+        <div>
+          <div class="col-title">디바이스 1</div>
+          <div class="panel-form">
+            <div class="field">
+              <div class="field-name">비콘, 스캐너</div>
+              <div class="radio-row">
+                <label class="radio"><input type="radio" name="dev-beacon"><span class="box"></span>사용</label>
+                <label class="radio"><input type="radio" name="dev-beacon"><span class="box"></span>미사용</label>
+              </div>
+            </div>
+            <div class="field">
+              <div class="field-name">CCTV</div>
+              <div class="radio-row">
+                <label class="radio"><input type="radio" name="dev-cctv"><span class="box"></span>사용</label>
+                <label class="radio"><input type="radio" name="dev-cctv"><span class="box"></span>미사용</label>
+              </div>
+            </div>
+            <div class="field">
+              <div class="field-name">유해가스</div>
+              <div class="radio-row">
+                <label class="radio"><input type="radio" name="dev-gas"><span class="box"></span>사용</label>
+                <label class="radio"><input type="radio" name="dev-gas"><span class="box"></span>미사용</label>
+              </div>
+            </div>
+            <div class="field">
+              <div class="field-name">비상벨</div>
+              <div class="radio-row">
+                <label class="radio"><input type="radio" name="dev-bell"><span class="box"></span>사용</label>
+                <label class="radio"><input type="radio" name="dev-bell"><span class="box"></span>미사용</label>
+              </div>
+            </div>
+            <div class="field">
+              <div class="field-name">TTS 비상방송</div>
+              <div class="radio-row">
+                <label class="radio"><input type="radio" name="dev-tts"><span class="box"></span>사용</label>
+                <label class="radio"><input type="radio" name="dev-tts"><span class="box"></span>미사용</label>
+              </div>
+            </div>
+            <div class="field">
+              <div class="field-name">와이파이</div>
+              <div class="radio-row">
+                <label class="radio"><input type="radio" name="dev-wifi"><span class="box"></span>사용</label>
+                <label class="radio"><input type="radio" name="dev-wifi"><span class="box"></span>미사용</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- col 4: 디바이스 2 -->
+        <div>
+          <div class="col-title">디바이스 2</div>
+          <div class="panel-form">
+            <div class="field">
+              <div class="field-name">하역 알림 센서</div>
+              <div class="radio-row">
+                <label class="radio"><input type="radio" name="dev-unload"><span class="box"></span>사용</label>
+                <label class="radio"><input type="radio" name="dev-unload"><span class="box"></span>미사용</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>window.__ACTIVE = 'sys-hyeonjang';</script>
+  <script src="../assets/js/sidebar.js"></script>
+</body>
+</html>

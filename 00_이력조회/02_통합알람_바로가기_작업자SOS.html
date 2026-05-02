@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>통합 알람 - 작업자 SOS</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="app">
+    <div id="sidebar-slot"></div>
+    <main class="main">
+      <div class="page-title">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 0 1 12 0v6l2 2H4l2-2z"/></svg></span>
+        <span class="crumb">통합 알람 이력</span>
+      </div>
+
+      <div class="alarm-split">
+        <div class="alarm-side" id="alarm-side-slot"></div>
+
+        <div class="right-table">
+          <div class="toolbar">
+            <div class="select"><select><option>터널명</option></select></div>
+            <input type="text" class="search" placeholder="작업자 이름">
+            <div class="date-input-group"><input value="2025-08-28"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="1"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span></div>
+            <span style="color:#666;">~</span>
+            <div class="date-input-group"><input value="2025-08-28"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="1"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span></div>
+            <div class="range-quick"><button class="active">오늘</button><button>1주일</button><button>1개월</button></div>
+            <button class="btn-dark">조회 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16" y2="16"/></svg></button>
+            <button class="btn-outline-sm" title="새로고침"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 4 20 10 14 10"/><path d="M20 10A8 8 0 1 0 18 18"/></svg></button>
+            <div class="right"><button class="btn-dark">다운로드 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v12"/><polyline points="6 11 12 17 18 11"/><line x1="4" y1="20" x2="20" y2="20"/></svg></button></div>
+          </div>
+
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th rowspan="2">노선</th><th rowspan="2">위치</th><th rowspan="2">이름</th><th rowspan="2">소속사</th><th rowspan="2">나이</th><th rowspan="2">연락처</th><th rowspan="2">수신 일시</th>
+                <th colspan="3">후속 조치</th>
+              </tr>
+              <tr><th>작성자</th><th>조치 일시</th><th>내용</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>노선명</td><td>지도보기</td><td>김작업</td><td>(주)오픈웍스</td><td>39세</td><td>010-0000-0000</td><td>2025-08-28<br>15:32:11</td><td>관리자</td><td>2025-08-28 18:00:01</td><td>내용보기</td></tr>
+              <tr><td>노선명</td><td>지도보기</td><td>최반장</td><td>(주)오픈웍스</td><td>45세</td><td>010-0000-0000</td><td>2025-08-28<br>15:32:11</td><td>관리자</td><td>-</td><td>작성하기</td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 내용보기 모달 (참고용) -->
+      <div class="modal-overlay" style="position:absolute; top:340px; right:80px; left:auto; bottom:auto; width:340px; background:transparent; align-items:flex-start; justify-content:flex-end;">
+        <div class="modal-card">
+          <div class="modal-head"><span class="title">내용보기</span><span class="close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></span></div>
+          <div class="modal-body">
+            <div class="form-row"><label class="form-label">작성자</label><input type="text" class="form-control" value="김팀장"></div>
+            <div class="form-row"><label class="form-label">조치내용</label><textarea class="form-control" style="height:140px;">조치내용을 보여주세요.
+내용이 길어지면 텍스트 영역이 늘어납니다. 내용이 길어지면 텍스트 영역이 늘어납니다. 내용이 길어지면 텍스트 영역이 늘어납니다. 내용이 길어지면 텍스트 영역이 늘어납니다.</textarea></div>
+          </div>
+          <div class="modal-foot"><button class="btn-save">등록</button></div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script>window.__ACTIVE = 'hist-alarm'; window.__ALARM = 'worker-sos';</script>
+  <script src="../assets/js/sidebar.js"></script>
+  <script src="../assets/js/alarm-side.js"></script>
+</body>
+</html>

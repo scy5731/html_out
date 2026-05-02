@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>디바이스 관리 - 유해가스</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .gas-table th { background:#f7f7f7; }
+    .range-input {
+      width: 64px;
+      height: 28px;
+      border: 1px solid #d8d8d8;
+      border-radius: 3px;
+      padding: 0 6px;
+      font-size: 12px;
+      text-align: center;
+    }
+    .range-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 8px;
+      align-items: center;
+      padding: 8px 0;
+    }
+    .range-item { display: flex; flex-direction: column; gap: 4px; align-items: center; }
+    .range-item .lbl { font-size: 11px; color: #666; }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <div id="sidebar-slot"></div>
+
+    <main class="main">
+      <div class="page-title">
+        <span class="ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21V11a3 3 0 0 1 6 0v10"/><path d="M5 21h14"/><circle cx="12" cy="6" r="2"/></svg>
+        </span>
+        <span class="crumb">디바이스 관리</span>
+        <span class="sep">|</span>
+        <span class="crumb">유해가스</span>
+      </div>
+
+      <div class="page-split">
+        <div class="left-form">
+          <div class="form-section-title">센서 정보</div>
+          <div class="form-row"><label class="form-label">INDEX</label><input type="text" class="form-control" placeholder="인덱스를 입력해 주세요."></div>
+          <div class="form-row"><label class="form-label">이름 <span class="req">*</span></label><input type="text" class="form-control" placeholder="이름을 입력해 주세요."></div>
+          <div class="form-row"><label class="form-label">IP <span class="req">*</span></label><input type="text" class="form-control" placeholder="IP 주소를 입력해 주세요."></div>
+          <div class="form-row"><label class="form-label">PORT <span class="req">*</span></label><input type="text" class="form-control" placeholder="포트를 입력해 주세요."></div>
+          <div class="form-row">
+            <label class="form-label">사진</label>
+            <div class="attach-row"><input type="text" class="form-control" placeholder="사진을 등록해 주세요." readonly><button class="btn-attach">첨부하기 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="11" r="2"/></svg></button></div>
+          </div>
+          <div class="form-row"><label class="form-label">비고</label><textarea class="form-control" placeholder="비고 입력란"></textarea></div>
+          <div class="form-row">
+            <label class="form-label">사용유무</label>
+            <div class="radio-row-inline">
+              <label class="radio"><input type="radio" name="use" checked><span class="box"></span>사용</label>
+              <label class="radio"><input type="radio" name="use"><span class="box"></span>미사용</label>
+              <label class="radio"><input type="radio" name="use"><span class="box"></span>교체</label>
+            </div>
+          </div>
+
+          <div class="form-section-title has-divider">GPS 정보</div>
+          <div class="form-row"><label class="form-label">GPS 인덱스 <span class="req">*</span></label><input type="text" class="form-control" placeholder="GPS 인덱스를 입력해 주세요."></div>
+          <div class="form-row"><label class="form-label">표시번호 <span class="req">*</span></label><div class="select" style="width:100%;"><select style="width:100%;"><option>1</option></select></div></div>
+
+          <div class="form-section-title has-divider">스캐너 정보</div>
+          <div class="form-row"><label class="form-label">MAC 주소 <span class="req">*</span></label><input type="text" class="form-control" placeholder="--:--:--:--:--"></div>
+          <div class="form-row"><label class="form-label">URL <span class="req">*</span></label><div class="attach-row"><input type="text" class="form-control" placeholder="URL을 입력해 주세요."><button class="btn-attach">바로가기 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 14l-1 1a3 3 0 1 1-4-4l3-3a3 3 0 0 1 4 0"/></svg></button></div></div>
+          <div class="form-row"><label class="form-label">PORT <span class="req">*</span></label><input type="text" class="form-control" placeholder="PORT를 입력해 주세요."></div>
+
+          <div class="form-section-title has-divider">참고서류</div>
+          <div class="form-row">
+            <div class="attach-row"><input type="text" class="form-control" placeholder="파일은 첨부해 주세요." readonly><button class="btn-attach">첨부하기 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="11" r="2"/></svg></button></div>
+            <div class="attach-files">
+              <div class="attach-files-title">첨부파일</div>
+              <div class="attach-files-list">
+                <div class="attach-file-row"><span class="dl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v12"/><polyline points="6 11 12 17 18 11"/></svg></span><span class="name">유해가스 측정표.jpg</span><span class="ts">2025-11-28 09:00:00</span><span class="x">×</span></div>
+                <div class="attach-file-row"><span class="dl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v12"/><polyline points="6 11 12 17 18 11"/></svg></span><span class="name">측정안내.pdf</span><span class="ts">2025-11-28 09:00:00</span><span class="x">×</span></div>
+                <div class="attach-file-row"><span class="dl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v12"/><polyline points="6 11 12 17 18 11"/></svg></span><span class="name">안전서류.zip</span><span class="ts">2025-11-28 09:00:00</span><span class="x">×</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-section-title has-divider">감지 범위 설정</div>
+          <div class="form-row">
+            <label class="form-label" style="font-weight:700;">위험성 유기 화합물 (PPM)</label>
+            <div class="range-grid">
+              <div class="range-item"><span class="lbl">0</span><input class="range-input" value="0"></div>
+              <div class="range-item"><span class="lbl">300</span><input class="range-input" value="300"></div>
+              <div class="range-item"><span class="lbl">1,000</span><input class="range-input" value="1000"></div>
+            </div>
+          </div>
+          <div class="form-row">
+            <label class="form-label" style="font-weight:700;">미세먼지 (PM)</label>
+            <div class="range-grid">
+              <div class="range-item"><span class="lbl">0</span><input class="range-input" value="0"></div>
+              <div class="range-item"><span class="lbl">75</span><input class="range-input" value="75"></div>
+              <div class="range-item"><span class="lbl">150</span><input class="range-input" value="150"></div>
+            </div>
+          </div>
+          <div class="form-row">
+            <label class="form-label" style="font-weight:700;">CO (ppm)</label>
+            <div class="range-grid">
+              <div class="range-item"><span class="lbl">0</span><input class="range-input" value="0"></div>
+              <div class="range-item"><span class="lbl">133</span><input class="range-input" value="133"></div>
+              <div class="range-item"><span class="lbl">200</span><input class="range-input" value="200"></div>
+            </div>
+          </div>
+          <div class="form-row">
+            <label class="form-label" style="font-weight:700;">황화수소 (ppm)</label>
+            <div class="range-grid">
+              <div class="range-item"><span class="lbl">0</span><input class="range-input" value="0"></div>
+              <div class="range-item"><span class="lbl">10</span><input class="range-input" value="10"></div>
+              <div class="range-item"><span class="lbl">15</span><input class="range-input" value="15"></div>
+            </div>
+          </div>
+          <div class="form-row">
+            <label class="form-label" style="font-weight:700;">일산화탄소 (PPM)</label>
+            <div class="range-grid">
+              <div class="range-item"><span class="lbl">0</span><input class="range-input" value="0"></div>
+              <div class="range-item"><span class="lbl">100</span><input class="range-input" value="100"></div>
+              <div class="range-item"><span class="lbl">200</span><input class="range-input" value="200"></div>
+            </div>
+          </div>
+          <div class="form-row">
+            <label class="form-label" style="font-weight:700;">이산화탄소 (PPM)</label>
+            <div class="range-grid">
+              <div class="range-item"><span class="lbl">0</span><input class="range-input" value="0"></div>
+              <div class="range-item"><span class="lbl">5,000</span><input class="range-input" value="5000"></div>
+              <div class="range-item"><span class="lbl">15,000</span><input class="range-input" value="15000"></div>
+            </div>
+          </div>
+
+          <button class="btn-save bottom-submit">등록</button>
+        </div>
+
+        <div class="right-table">
+          <div class="toolbar">
+            <div class="select"><select><option>유선/무선</option></select></div>
+            <input type="text" class="search" placeholder="이름">
+            <button class="btn-dark">조회 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16" y2="16"/></svg></button>
+            <div class="right"><button class="btn-outline-sm">선택삭제</button></div>
+          </div>
+
+          <table class="data-table gas-table">
+            <thead>
+              <tr>
+                <th rowspan="2" class="col-checkbox"><label class="chk"><input type="checkbox"><span class="box"></span></label></th>
+                <th rowspan="2">INDEX</th>
+                <th rowspan="2">표시번호</th>
+                <th rowspan="2">이름</th>
+                <th colspan="6">가스 감지 범위</th>
+              </tr>
+              <tr>
+                <th>이름</th>
+                <th>위험농도</th>
+                <th>측정농도</th>
+                <th>안전</th>
+                <th>위험경계</th>
+                <th>위험농도</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><label class="chk"><input type="checkbox"><span class="box"></span></label></td>
+                <td>AAA-TT-100100</td>
+                <td>1</td>
+                <td>유해가스 이름</td>
+                <td>위험성 유기 화합물</td>
+                <td>-</td>
+                <td>-</td>
+                <td class="pill-safe">0~300</td>
+                <td class="pill-warn">300~600</td>
+                <td class="pill-danger">60~1,000</td>
+              </tr>
+              <tr><td></td><td></td><td></td><td></td><td>미세먼지</td><td>-</td><td>-</td><td class="pill-safe">0~75</td><td class="pill-warn">75~150</td><td class="pill-danger">75~150</td></tr>
+              <tr><td></td><td></td><td></td><td></td><td>CO</td><td class="pill-safe">0~133</td><td class="pill-warn">133~200</td><td>-</td><td>-</td><td class="pill-danger">0~5</td></tr>
+              <tr><td></td><td></td><td></td><td></td><td>황화수소</td><td>-</td><td>-</td><td class="pill-safe">0~10</td><td class="pill-warn">10~15</td><td class="pill-danger">10~15</td></tr>
+              <tr><td></td><td></td><td></td><td></td><td>일산화탄소</td><td>-</td><td>-</td><td class="pill-safe">0~100</td><td class="pill-warn">100~200</td><td class="pill-danger">100~200</td></tr>
+              <tr><td></td><td></td><td></td><td></td><td>이산화탄소</td><td>-</td><td>-</td><td class="pill-safe">0~5,000</td><td class="pill-warn">5,000~15,000</td><td class="pill-danger">15,000</td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script>window.__ACTIVE = 'gen-gas';</script>
+  <script src="../assets/js/sidebar.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>적산 조회 - 결과</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="app">
+    <div id="sidebar-slot"></div>
+    <main class="main">
+      <div class="page-title">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17h2a2 2 0 0 1 4 0h6a2 2 0 0 1 4 0h2v-5l-2-4h-5V8H3z"/></svg></span>
+        <span class="crumb">적산 조회</span>
+      </div>
+
+      <div class="page-split">
+        <div class="left-form">
+          <div class="juck-vehicle-card">
+            <div class="icon-circle"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17h2a2 2 0 0 1 4 0h6a2 2 0 0 1 4 0h2v-5l-2-4h-5V8H3z"/></svg></div>
+            <div class="info">
+              <div class="nm">덤프트럭</div>
+              <div class="desc">경기 00 가 0000 | 김기사<br>(주)오픈웍스</div>
+            </div>
+            <div class="total"><span class="val">2</span>총 적산</div>
+          </div>
+
+          <div class="juck-list-title">적산 등록 차량</div>
+          <div class="juck-vehicle-list">
+            <div class="item"><span class="type">덤프트럭</span><span class="num">경기 11 마 1111</span></div>
+            <div class="item active"><span class="type">덤프트럭</span><span class="num">경기 00 가 0000</span></div>
+            <div class="item"><span class="type">덤프트럭</span><span class="num">경기 11 마 1234</span></div>
+            <div class="item"><span class="type">덤프트럭</span><span class="num">서울 00 바 0000</span></div>
+            <div class="item"><span class="type">덤프트럭</span><span class="num">경기 22 가 2222</span></div>
+          </div>
+        </div>
+
+        <div class="right-table">
+          <div class="toolbar">
+            <div class="date-input-group"><input value="2025-08-28"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="1"/></svg></span></div>
+            <span style="color:#666;">~</span>
+            <div class="date-input-group"><input value="2025-08-28"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="1"/></svg></span></div>
+            <div class="range-quick"><button class="active">오늘</button><button>1주일</button><button>1개월</button></div>
+            <button class="btn-dark">이동경로조회 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16" y2="16"/></svg></button>
+            <button class="btn-outline-sm" title="새로고침"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 4 20 10 14 10"/><path d="M20 10A8 8 0 1 0 18 18"/></svg></button>
+          </div>
+
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th rowspan="2">NO</th>
+                <th colspan="2">시작점</th>
+                <th colspan="2">종료점</th>
+              </tr>
+              <tr><th>구역이름</th><th>진입일시</th><th>구역이름</th><th>진입일시</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td>구역명</td><td>2025-08-28 09:00:00</td><td>구역명</td><td>2025-08-28 12:00:00</td></tr>
+              <tr><td>2</td><td>구역명</td><td>2025-08-28 13:00:01</td><td>구역명</td><td>2025-08-28 14:12:45</td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script>window.__ACTIVE = 'hist-jucksan';</script>
+  <script src="../assets/js/sidebar.js"></script>
+</body>
+</html>

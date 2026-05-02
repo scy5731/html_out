@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>통합 알람 - NMS 장애</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="app">
+    <div id="sidebar-slot"></div>
+    <main class="main">
+      <div class="page-title">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 0 1 12 0v6l2 2H4l2-2z"/></svg></span>
+        <span class="crumb">통합 알람 이력</span>
+      </div>
+
+      <div class="alarm-split">
+        <div class="alarm-side" id="alarm-side-slot"></div>
+
+        <div class="right-table">
+          <div class="toolbar">
+            <div class="select"><select><option>노선 전체</option></select></div>
+            <div class="select"><select><option>디바이스 전체</option></select></div>
+            <div class="date-input-group"><input value="2025-08-28"></div>
+            <span style="color:#666;">~</span>
+            <div class="date-input-group"><input value="2025-08-28"></div>
+            <div class="range-quick"><button class="active">오늘</button><button>1주일</button><button>1개월</button></div>
+            <button class="btn-dark">조회</button>
+            <button class="btn-outline-sm" title="새로고침"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 4 20 10 14 10"/><path d="M20 10A8 8 0 1 0 18 18"/></svg></button>
+            <div class="right"><button class="btn-dark">다운로드</button></div>
+          </div>
+
+          <table class="data-table">
+            <thead>
+              <tr><th>노선</th><th>위치</th><th>디바이스</th><th>디바이스 이름</th><th>발생일시</th><th>복구일시</th><th>누적시간</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script>window.__ACTIVE = 'hist-alarm'; window.__ALARM = 'nms';</script>
+  <script src="../assets/js/sidebar.js"></script>
+  <script src="../assets/js/alarm-side.js"></script>
+</body>
+</html>

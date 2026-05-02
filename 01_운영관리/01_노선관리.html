@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>노선관리</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="app">
+    <div id="sidebar-slot"></div>
+
+    <main class="main">
+      <div class="page-title">
+        <span class="ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21l4-18 8 18 4-18"/></svg>
+        </span>
+        <span class="crumb">노선관리</span>
+      </div>
+
+      <div class="page-split">
+        <div class="left-form">
+          <div class="form-row">
+            <label class="form-label">구간</label>
+            <div class="select" style="width:100%;"><select style="width:100%;"><option>구간을 선택해 주세요.</option></select></div>
+          </div>
+
+          <div class="form-row">
+            <label class="form-label">노선</label>
+            <input type="text" class="form-control" placeholder="노선을 입력해 주세요.">
+          </div>
+
+          <div class="form-row">
+            <label class="form-label">굴진 방향</label>
+            <div class="select" style="width:100%;"><select style="width:100%;"><option>굴진 방향을 선택해 주세요.</option></select></div>
+          </div>
+
+          <div class="form-row">
+            <label class="form-label">계획 연장</label>
+            <div class="input-group"><input type="text" class="form-control" placeholder="계획 연장 길이를 입력해 주세요."><span class="suffix">m</span></div>
+          </div>
+
+          <div class="form-row">
+            <label class="form-label">비고</label>
+            <textarea class="form-control" placeholder="비고 입력란"></textarea>
+          </div>
+
+          <div style="height: 280px;"></div>
+          <button class="btn-save">저장</button>
+        </div>
+
+        <div class="right-table">
+          <div class="toolbar">
+            <div class="right"><button class="btn-outline-sm">선택삭제</button></div>
+          </div>
+
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th class="col-checkbox"><label class="chk"><input type="checkbox"><span class="box"></span></label></th>
+                <th>구간</th><th>노선</th><th>굴진 방향</th><th>계획연장</th><th>등록일</th><th>수정일</th><th>비고</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><label class="chk"><input type="checkbox"><span class="box"></span></label></td>
+                <td>1-1 구간</td><td></td><td>시점방향</td><td>120m</td><td>2025-08-28</td><td>-</td><td>-</td>
+              </tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script>window.__ACTIVE = 'op-route';</script>
+  <script src="../assets/js/sidebar.js"></script>
+</body>
+</html>

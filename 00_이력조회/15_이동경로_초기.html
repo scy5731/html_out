@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>이동 경로 조회</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="app">
+    <div id="sidebar-slot"></div>
+    <main class="main map-page-main">
+      <div class="page-title">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="6" r="2"/><circle cx="18" cy="18" r="2"/><path d="M8 6h6a4 4 0 0 1 0 8H10a4 4 0 0 0 0 8h6"/></svg></span>
+        <span class="crumb">이동 경로 조회</span>
+      </div>
+
+      <div class="map-split">
+        <div class="route-side">
+          <div style="display:flex;gap:6px;align-items:center;margin-bottom:14px;">
+            <div class="date-input-group" style="flex:1;"><input value="2025-08-28" style="width:100%"></div>
+            <span style="color:#666;">~</span>
+            <div class="date-input-group" style="flex:1;"><input value="2025-08-28" style="width:100%"></div>
+          </div>
+          <div style="display:flex;gap:4px;margin-bottom:12px;">
+            <div class="range-quick" style="flex:1;"><button class="active" style="flex:1;">오늘</button><button style="flex:1;">어제</button><button style="flex:1;">1주일</button></div>
+            <button class="btn-dark" style="height:32px;padding:0 12px;font-size:12px;">이동경로조회 <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16" y2="16"/></svg></button>
+          </div>
+
+          <div class="section-h">차량 목록</div>
+          <div class="target-row">
+            <div class="select"><select><option>차량</option></select></div>
+            <div class="select"><select><option>이동형 CCTV</option></select></div>
+          </div>
+          <div style="font-size:12px;color:#aaa; padding: 6px 4px;">: 다중 선택 가능</div>
+
+          <div class="vehicle-row"><span class="ic"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M3 17h2a2 2 0 0 1 4 0h6a2 2 0 0 1 4 0h2v-5l-2-4h-5V8H3z"/></svg></span> <span>김기사</span><span class="num">(번호 1번)</span></div>
+          <div class="vehicle-row"><span class="ic"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M3 17h2a2 2 0 0 1 4 0h6a2 2 0 0 1 4 0h2v-5l-2-4h-5V8H3z"/></svg></span> <span>김반장</span><span class="num">(번호 2번)</span></div>
+          <div class="vehicle-row"><span class="ic"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M3 17h2a2 2 0 0 1 4 0h6a2 2 0 0 1 4 0h2v-5l-2-4h-5V8H3z"/></svg></span> <span>김기사</span><span class="num">(번호 3번)</span></div>
+          <div class="vehicle-row"><span class="ic"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M3 17h2a2 2 0 0 1 4 0h6a2 2 0 0 1 4 0h2v-5l-2-4h-5V8H3z"/></svg></span> <span>박기사</span><span class="num">(번호 4번)</span></div>
+        </div>
+
+        <div class="map-area">
+          <div class="map-search-overlay"><button class="btn-dark">스카이뷰</button></div>
+          <div class="map-zoom"><button>+</button><button>−</button></div>
+          <svg viewBox="0 0 800 600" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%;">
+            <path d="M250,150 L500,200 L600,360 L380,420 L220,300 Z" fill="rgba(33,150,243,0.18)" stroke="#1976d2" stroke-width="2"/>
+          </svg>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script>window.__ACTIVE = 'hist-route';</script>
+  <script src="../assets/js/sidebar.js"></script>
+</body>
+</html>

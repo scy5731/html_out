@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>스캐너 그룹관리</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .scanner-grid {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 16px;
+      align-items: start;
+    }
+    .scanner-form .section-title {
+      margin-bottom: 14px;
+    }
+    .scanner-form .form-row { margin-bottom: 18px; }
+    .scanner-table-wrap {
+      position: relative;
+    }
+    .table-toolbar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .table-toolbar .right { margin-left: auto; }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <div id="sidebar-slot"></div>
+
+    <main class="main">
+      <div class="page-title">
+        <span class="ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12a7 7 0 0 1 14 0"/>
+            <path d="M8.5 14a3.5 3.5 0 0 1 7 0"/>
+            <circle cx="12" cy="17" r="1.4" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="crumb">스캐너 그룹관리</span>
+      </div>
+
+      <div class="scanner-grid">
+        <!-- left form -->
+        <div class="scanner-form">
+          <div class="section-title">그룹 정보</div>
+
+          <div class="form-row">
+            <label class="form-label">그룹</label>
+            <input type="text" class="form-control" placeholder="그룹명을 입력해 주세요.">
+          </div>
+
+          <div class="form-row">
+            <label class="form-label">노선</label>
+            <div class="select" style="width:100%;">
+              <select style="width:100%;">
+                <option>노선을 선택해 주세요.</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label class="form-label">용도</label>
+            <div class="select" style="width:100%;">
+              <select style="width:100%;">
+                <option>사용 용도를 선택해 주세요.</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label class="form-label">설치 위치</label>
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="설치 위치를 입력해 주세요.">
+              <span class="suffix">m</span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label class="form-label">비고</label>
+            <textarea class="form-control" placeholder="비고 입력란"></textarea>
+          </div>
+
+          <div style="height: 220px;"></div>
+          <button class="btn-save">저장</button>
+        </div>
+
+        <!-- right table -->
+        <div class="scanner-table-wrap">
+          <div class="table-toolbar">
+            <div class="select">
+              <select>
+                <option>노선 전체</option>
+                <option>노선명 1</option>
+              </select>
+            </div>
+            <div class="right">
+              <button class="btn-outline-sm">선택삭제</button>
+            </div>
+          </div>
+
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th class="col-checkbox"><label class="chk"><input type="checkbox"><span class="box"></span></label></th>
+                <th>그룹</th>
+                <th>노선</th>
+                <th>용도</th>
+                <th>설치 위치</th>
+                <th>비고</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><label class="chk"><input type="checkbox"><span class="box"></span></label></td>
+                <td>그룹명</td>
+                <td>노선명</td>
+                <td>위치측정</td>
+                <td>100m</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td><label class="chk"><input type="checkbox"><span class="box"></span></label></td>
+                <td>그룹명</td>
+                <td>노선명</td>
+                <td>위치측정</td>
+                <td>100m</td>
+                <td>-</td>
+              </tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>window.__ACTIVE = 'sys-scanner-grp';</script>
+  <script src="../assets/js/sidebar.js"></script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>차량 관리</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="app">
+    <div id="sidebar-slot"></div>
+
+    <main class="main">
+      <div class="page-title">
+        <span class="ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 17h2a2 2 0 0 1 4 0h6a2 2 0 0 1 4 0h2v-5l-2-4h-5V8H3z"/>
+            <circle cx="7" cy="17" r="2"/>
+            <circle cx="17" cy="17" r="2"/>
+          </svg>
+        </span>
+        <span class="crumb">차량 관리</span>
+      </div>
+
+      <div class="page-split">
+        <div class="left-form">
+          <div class="form-section-title">차량 정보</div>
+
+          <div class="form-row">
+            <label class="form-label">차량 종류 <span class="req">*</span></label>
+            <input type="text" class="form-control" placeholder="차량 종류를 입력해 주세요.">
+          </div>
+
+          <div class="form-row">
+            <label class="form-label">차량 번호 <span class="req">*</span></label>
+            <input type="text" class="form-control" placeholder="차량 번호를 입력해 주세요.">
+          </div>
+
+          <div class="form-row">
+            <label class="form-label">적산 조회 여부</label>
+            <div class="radio-row-inline">
+              <label class="radio"><input type="radio" name="jucksan"><span class="box"></span>사용</label>
+              <label class="radio"><input type="radio" name="jucksan" checked><span class="box"></span>미사용</label>
+            </div>
+          </div>
+
+          <div class="form-section-title has-divider">차량기사 정보</div>
+
+          <div class="form-row">
+            <label class="form-label">소속사 <span class="req">*</span></label>
+            <div class="select" style="width:100%;">
+              <select style="width:100%;"><option>소속사를 선택해 주세요.</option></select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label class="form-label">이름 <span class="req">*</span></label>
+            <input type="text" class="form-control" placeholder="이름을 입력해 주세요.">
+          </div>
+
+          <div class="form-row">
+            <label class="form-label">직위</label>
+            <input type="text" class="form-control" placeholder="직위를 입력해 주세요.">
+          </div>
+
+          <div class="form-row">
+            <div class="row-with-toggle">
+              <div>
+                <label class="form-label">핸드폰 <span class="req">*</span></label>
+                <input type="text" class="form-control" placeholder="연락처를 입력해 주세요.">
+              </div>
+              <div>
+                <label class="toggle-label">알림 허용</label>
+                <label class="toggle"><input type="checkbox"><span class="track"></span><span class="knob"></span></label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label class="form-label">생년월일 <span class="req">*</span></label>
+            <div class="attach-row">
+              <input type="text" class="form-control" placeholder="생년월일을 선택해 주세요.">
+              <button class="btn-attach">생년월일 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="1"/><line x1="3" y1="10" x2="21" y2="10"/></svg></button>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="two-col">
+              <div>
+                <label class="form-label">혈액형</label>
+                <div class="select" style="width:100%;"><select style="width:100%;"><option>A</option><option>B</option><option>O</option><option>AB</option></select></div>
+              </div>
+              <div>
+                <label class="form-label">분류</label>
+                <div class="select" style="width:100%;"><select style="width:100%;"><option>RH +</option><option>RH -</option></select></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label class="form-label">국적</label>
+            <input type="text" class="form-control" placeholder="국적을 입력해 주세요.">
+          </div>
+
+          <div class="form-row">
+            <label class="form-label">사진</label>
+            <div class="attach-row">
+              <input type="text" class="form-control" placeholder="사진을 등록해 주세요." readonly>
+              <button class="btn-attach">첨부하기 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="11" r="2"/><polyline points="3 17 9 13 14 17 21 11"/></svg></button>
+            </div>
+          </div>
+
+          <button class="btn-save bottom-submit">등록</button>
+        </div>
+
+        <div class="right-table">
+          <div class="toolbar">
+            <div class="select"><select><option>차량 종류</option></select></div>
+            <div class="select"><select><option>소속사</option></select></div>
+            <input type="text" class="search" placeholder="차량을 입력해 주세요.">
+            <button class="btn-dark">조회 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16" y2="16"/></svg></button>
+            <button class="btn-dark">다운로드 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v12"/><polyline points="6 11 12 17 18 11"/><line x1="4" y1="20" x2="20" y2="20"/></svg></button>
+            <div class="right">
+              <button class="btn-outline-sm">선택삭제</button>
+            </div>
+          </div>
+
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th class="col-checkbox" rowspan="2"><label class="chk"><input type="checkbox"><span class="box"></span></label></th>
+                <th colspan="2">차량 정보</th>
+                <th colspan="6">차량기사 정보</th>
+                <th rowspan="2">차량기사 정보</th>
+              </tr>
+              <tr>
+                <th>차량 종류</th>
+                <th>차량 번호</th>
+                <th>소속사</th>
+                <th>이름</th>
+                <th>알람</th>
+                <th>나이</th>
+                <th>혈액형</th>
+                <th>국적</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><label class="chk"><input type="checkbox"><span class="box"></span></label></td><td>점보드릴</td><td>서울 999-1234</td><td>(주)오픈웍스 협력사</td><td>김기사</td><td>on</td><td>47</td><td>A RH+</td><td>대한민국</td><td>대한민국</td></tr>
+              <tr><td><label class="chk"><input type="checkbox"><span class="box"></span></label></td><td>25t 카고크레인</td><td>경기 123-0000</td><td>(주)오픈웍스 협력사</td><td>최기사</td><td>on</td><td>50</td><td>O RH+</td><td>대한민국</td><td>대한민국</td></tr>
+              <tr><td><label class="chk"><input type="checkbox"><span class="box"></span></label></td><td>덤프트럭</td><td>경기 123-0123</td><td>(주)오픈웍스 협력사</td><td>오기사</td><td>on</td><td>55</td><td>A RH+</td><td>대한민국</td><td>대한민국</td></tr>
+              <tr><td><label class="chk"><input type="checkbox"><span class="box"></span></label></td><td>레미콘</td><td>경기 100-0999</td><td>(주)오픈웍스 협력사</td><td>박기사</td><td>on</td><td>43</td><td>AB RH+</td><td>대한민국</td><td>대한민국</td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>window.__ACTIVE = 'gen-vehicle';</script>
+  <script src="../assets/js/sidebar.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>이동 경로 조회 - 결과</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="app">
+    <div id="sidebar-slot"></div>
+    <main class="main map-page-main">
+      <div class="page-title">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="6" r="2"/><circle cx="18" cy="18" r="2"/><path d="M8 6h6a4 4 0 0 1 0 8H10a4 4 0 0 0 0 8h6"/></svg></span>
+        <span class="crumb">이동 경로 조회</span>
+      </div>
+
+      <div class="map-split">
+        <div class="route-side" style="max-height: calc(100vh - 130px); overflow-y: auto;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;padding:10px;border:1px solid #e3e3e3;border-radius:4px;">
+            <div style="width:36px;height:36px;border-radius:50%;background:#f0f0f0;display:flex;align-items:center;justify-content:center;color:#888;"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></div>
+            <div style="flex:1;">
+              <div style="font-weight:700;font-size:13px;">김팀장</div>
+              <div style="font-size:11px;color:#888;margin-top:2px;">고정형 CCTV</div>
+            </div>
+            <div style="text-align:center;font-size:11px;color:#888;"><div style="font-weight:700;font-size:18px;color:#222;">5</div></div>
+          </div>
+
+          <div style="display:flex;gap:6px;align-items:center;margin-bottom:10px;">
+            <div class="date-input-group" style="flex:1;"><input value="2025-08-28" style="width:100%"></div>
+          </div>
+          <div class="section-h" style="border-top:none;padding-top:0;">전화번호 이력 활용</div>
+
+          <div style="font-size:12px;font-weight:700;color:#444;padding:10px 4px 4px;border-top:1px solid #ececec;">2025-08-28 09:00:00 <span style="color:#00a8e8;float:right;">현장진입</span></div>
+
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="time">2025-08-28 09:00:00</div>
+              <div class="meta">현장진입</div>
+            </div>
+            <div class="timeline-item">
+              <div class="time">2025-08-28 09:00:00</div>
+              <div class="meta">현장진입</div>
+            </div>
+            <div class="timeline-item active">
+              <div class="time">2025-08-28 09:00:00</div>
+              <div class="meta">현장진입</div>
+            </div>
+            <div class="timeline-item">
+              <div class="time">2025-08-28 09:00:00</div>
+              <div class="meta">적산구역</div>
+            </div>
+            <div class="timeline-item">
+              <div class="time">2025-08-28 09:00:00</div>
+              <div class="meta">적산구역</div>
+            </div>
+            <div class="timeline-item">
+              <div class="time">2025-08-28 09:00:00</div>
+              <div class="meta">적산구역</div>
+            </div>
+          </div>
+          <div style="font-size:12px;font-weight:700;color:#444;padding:10px 4px 4px;border-top:1px solid #ececec;">2025-09-17 <span style="color:#00a8e8;float:right;">현장진입</span></div>
+        </div>
+
+        <div class="map-area">
+          <div class="map-search-overlay"><button class="btn-dark">스카이뷰</button></div>
+          <div class="map-zoom"><button>+</button><button>−</button></div>
+          <svg viewBox="0 0 800 600" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%;">
+            <path d="M250,150 L500,200 L600,360 L380,420 L220,300 Z" fill="rgba(33,150,243,0.18)" stroke="#1976d2" stroke-width="2"/>
+            <polyline points="280,180 360,220 440,260 460,310 520,330 560,350" fill="none" stroke="#1976d2" stroke-width="3"/>
+            <circle cx="280" cy="180" r="6" fill="#1976d2"/>
+            <circle cx="460" cy="310" r="8" fill="#fff" stroke="#1976d2" stroke-width="3"/>
+            <circle cx="560" cy="350" r="6" fill="#1976d2"/>
+          </svg>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script>window.__ACTIVE = 'hist-route';</script>
+  <script src="../assets/js/sidebar.js"></script>
+</body>
+</html>

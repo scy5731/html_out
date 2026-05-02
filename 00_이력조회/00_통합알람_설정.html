@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>통합 알람 이력 - 설정</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="app">
+    <div id="sidebar-slot"></div>
+
+    <main class="main">
+      <div class="page-title">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 0 1 12 0v6l2 2H4l2-2z"/><path d="M10 20a2 2 0 0 0 4 0"/></svg></span>
+        <span class="crumb">통합 알람 이력</span>
+      </div>
+
+      <div style="max-width: 360px;">
+        <div class="alarm-tabs" style="display:flex;border-bottom:1px solid #e3e3e3;margin-bottom:18px;">
+          <div class="tab active" style="padding:10px 24px;font-size:13px;color:#222;font-weight:700;border-bottom:2px solid #2c2f33;margin-bottom:-1px;">설정</div>
+          <a href="01_통합알람_바로가기.html" style="text-decoration:none;color:inherit;"><div class="tab" style="padding:10px 24px;font-size:13px;color:#999;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;">바로가기</div></a>
+        </div>
+
+        <div style="background:#fff;border:1px solid #e3e3e3;border-radius:4px;padding:14px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 4px;border-bottom:1px solid #f0f0f0;">
+            <div style="font-weight:700;">SOS 알람</div>
+            <label class="toggle"><input type="checkbox" checked><span class="track"></span><span class="knob"></span></label>
+          </div>
+          <div style="padding:14px 4px;border-bottom:1px solid #f0f0f0;">
+            <div style="display:flex;align-items:center;justify-content:space-between;">
+              <div style="font-weight:700;">AI CCTV 이벤트</div>
+              <label class="toggle"><input type="checkbox" checked><span class="track"></span><span class="knob"></span></label>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px;padding-left:4px;">
+              <label class="chk"><input type="checkbox" checked><span class="box"></span>쓰러짐</label>
+              <label class="chk"><input type="checkbox" checked><span class="box"></span>안전모 미착용</label>
+              <label class="chk"><input type="checkbox" checked><span class="box"></span>연기발생</label>
+              <label class="chk"><input type="checkbox" checked><span class="box"></span>위험구역 출입</label>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 4px;border-bottom:1px solid #f0f0f0;">
+            <div style="font-weight:700;">유해가스</div>
+            <label class="toggle"><input type="checkbox" checked><span class="track"></span><span class="knob"></span></label>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 4px;border-bottom:1px solid #f0f0f0;">
+            <div style="font-weight:700;">이동형 CCTV</div>
+            <label class="toggle"><input type="checkbox" checked><span class="track"></span><span class="knob"></span></label>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 4px;border-bottom:1px solid #f0f0f0;">
+            <div style="font-weight:700;">NMS 장애</div>
+            <label class="toggle"><input type="checkbox"><span class="track"></span><span class="knob"></span></label>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 4px;">
+            <div style="font-weight:700;">비인가 구역</div>
+            <label class="toggle"><input type="checkbox" checked><span class="track"></span><span class="knob"></span></label>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script>window.__ACTIVE = 'hist-alarm';</script>
+  <script src="../assets/js/sidebar.js"></script>
+</body>
+</html>

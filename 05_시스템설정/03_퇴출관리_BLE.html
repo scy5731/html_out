@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>퇴출관리 - BLE</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="app">
+    <div id="sidebar-slot"></div>
+
+    <main class="main">
+      <div class="page-title">
+        <span class="ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="6" r="3"/>
+            <path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/>
+            <path d="M16 11l3-3m0 3l3-3m-6 6h6"/>
+          </svg>
+        </span>
+        <span class="crumb">퇴출관리</span>
+        <span class="sep">|</span>
+        <span class="crumb">BLE</span>
+      </div>
+
+      <div class="filter-bar">
+        <div class="select">
+          <select>
+            <option>노선 전체</option>
+            <option>노선명 1</option>
+          </select>
+        </div>
+        <div class="select">
+          <select>
+            <option>소속사</option>
+            <option>(주)오픈웍스</option>
+          </select>
+        </div>
+        <input type="text" class="search" placeholder="검색할 내용을 입력해주세요.">
+        <button class="btn-dark">
+          조회
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16" y2="16"/></svg>
+        </button>
+      </div>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th rowspan="2" style="width: 14%;">노선</th>
+            <th rowspan="2" style="width: 10%;">소속사</th>
+            <th colspan="3">작업자 정보</th>
+            <th colspan="3">차량 정보</th>
+            <th rowspan="2" style="width: 12%;">진입일시</th>
+            <th rowspan="2" style="width: 12%;">퇴출일시</th>
+            <th rowspan="2" style="width: 8%;">강제퇴출</th>
+          </tr>
+          <tr>
+            <th>이름</th>
+            <th>직위</th>
+            <th>국적</th>
+            <th>차량종류</th>
+            <th>차량번호</th>
+            <th>차량기사</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>노선명</td>
+            <td>(주)오픈웍스</td>
+            <td>김작업</td>
+            <td>작업반장</td>
+            <td>대한민국</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>2025-09-01 09:00:00</td>
+            <td>2025-09-01 18:00:00</td>
+            <td><button class="btn-danger-sm disabled">강제퇴출 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="6" r="3"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg></button></td>
+          </tr>
+          <tr>
+            <td>노선명</td>
+            <td>(주)오픈웍스</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>덤프트럭</td>
+            <td>경기 123 다 0000</td>
+            <td>최기사</td>
+            <td>2025-09-01 09:00:00</td>
+            <td>2025-09-01 18:00:00</td>
+            <td><button class="btn-danger-sm disabled">강제퇴출 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="6" r="3"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg></button></td>
+          </tr>
+          <tr>
+            <td>노선명</td>
+            <td>(주)오픈웍스</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>굴삭기</td>
+            <td>경기 000 가 0000</td>
+            <td>김기사</td>
+            <td>2025-09-01 09:00:00</td>
+            <td>-</td>
+            <td><button class="btn-danger-sm">강제퇴출 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="6" r="3"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg></button></td>
+          </tr>
+          <tr>
+            <td>노선명</td>
+            <td>(주)오픈웍스</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>굴삭기</td>
+            <td>서울 123 마 1234</td>
+            <td>박기사</td>
+            <td>2025-09-01 09:00:00</td>
+            <td>-</td>
+            <td><button class="btn-danger-sm disabled">강제퇴출 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="6" r="3"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg></button></td>
+          </tr>
+          <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr class="empty"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        </tbody>
+      </table>
+    </main>
+  </div>
+
+  <script>window.__ACTIVE = 'sys-exit-ble';</script>
+  <script src="../assets/js/sidebar.js"></script>
+</body>
+</html>
